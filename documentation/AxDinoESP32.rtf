@@ -1,0 +1,244 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww10800\viewh14580\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs28 \cf0 AxDinoESP32 API
+\fs24 \
+
+\fs20 Version 2.0\
+5-14-2021
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b \cf0 Introduction
+\f0\b0 \
+
+\fs20 The AxDinoESP32 Arduino library provides an interface to the hardware controlled by the ESP32 and implements the following functionality.\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 {\listtext	1.	}Provides a simple method-based API to control the hardware from an Arduino sketch.\
+{\listtext	2.	}Automatically reads the Wheelchair Relay box inputs and optionally switches the output relays enabling wheelchair control. \
+{\listtext	3.	}Automatically reads the temperature sensor and optionally switches on the fan when the temperature exceeds a threshold and switches off the fan when the temperature falls 5\'b0C below the threshold.
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b \cf0 Installation
+\f0\b0 \
+
+\fs20 Install the AxDinoESP32 library directory in your Arduino environment local libraries directory.\
+\
+You also need to install the following additional libraries.\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	1.	}KMPProDinoESP32 - download from https://kmpelectronics.eu/tutorials-examples/prodino-esp32-versions-tutorial/\
+{\listtext	2.	}OneWire - May be installed using the Arduino Library Manager\
+{\listtext	3.	}DallasTemperature - May be installed using the Arduino Library Manager
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b \cf0 Use
+\f0\b0 \
+
+\fs20 Assuming ESP32 support as been added to the Arduino environment, set the Board type to \'93ESP32 Dev Board\'94 and the serial Port to the port connected to the ESP32.\
+ \
+Include the library in the Arduino sketch.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2 \cf0 #include \'93AxDinoESP32.h\'94
+\f0 \
+\
+It is not necessary to include any other other libraries.  They are included automatically.\
+\
+Initialize the Serial output and the library in the 
+\f2 setup
+\f0  routine.  The Serial output is necessary for diagnostic logging.\
+\
+
+\f2 Serial.begin(115200);\
+AxDinoESP32.begin();
+\f0\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs20 \cf0 \
+The AxDinoESP32 class is automatically instanced by the library.\
+\
+The \'93lib_test\'94 demo shows basic operation and can be found in the library 
+\f2 examples
+\f0  sub-directory.
+\fs24 \
+\
+\
+
+\f1\b API
+\f0\b0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2 \cf0 void begin()
+\f0  - 
+\fs20 Initialize the controller and start temperature and input monitoring and automatic fan and output relay control (both enabled by default).  Must be called before any other API method.\
+	Inputs - none\
+	Return - none\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2 \cf0 char* getVersion()
+\f0  - 
+\fs20 Return a pointer to a character string containing the current library version, e.g. \'931.0\'94.\
+	Inputs - none\
+	Return - pointer to constant char string\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2 \cf0 float getTemp(int units)
+\f0  - 
+\fs20 Return the current temperature sensor value in the specified units (C or F).\
+	Inputs\
+		units - One of the constants AD_TEMP_C or AD_TEMP_F\
+	Return - Floating point temperature value in the specified units
+\fs24 \
+\
+\
+
+\f2 float getFanAutoTemp()
+\f0  - 
+\fs20 Return the automatic fan control temperature threshold (C).\
+	Inputs - none\
+	Return - Temperature threshold in degrees C
+\fs24 \
+\
+\
+
+\f2 void setFanAutoTemp(float t, int units)
+\f0  - 
+\fs20 Specify the temperature threshold for automatic fan control.\
+	Inputs\
+		t - Floating point temperature value interpreted in the specified units\
+		units - One of the constants AD_TEMP_C or AD_TEMP_F\
+	Return - none\
+\
+\
+Note: The default temperature threshold is 40\'b0C.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2 \cf0 bool getSwitch(int n)
+\f0  - 
+\fs20 Return the current Wheelchair Relay box switch inputs used for automatic output enables.\
+	Inputs\
+		n - An integer value in the range 0 - 3 specifying the following Wheelchair relay controls (\'93Forward\'94, \'93Reverse\'94, \'93Right\'94, \'93Left\'94).  These switch values are mapped to the four relay outputs.\
+	Return - true if the switch is set, false if the switch is clear.
+\fs24 \
+\
+\
+
+\f2 void setOutput(int n, bool state)
+\f0  - 
+\fs20 Manually control one of the outputs (Pi power enable, Fan power enable and four relay outputs).  Note that clearing the Pi output may have no effect if the Wheelchair relay output associated with it (\'93Horn\'94) is set, clearing the Fan output may have no effect if automatic fan functionality has been enabled and clearing a relay may have no effect if the automatic switch functionality has been enabled then (over-ridden by Wheelchair relay controls).\
+	Inputs\
+		n - One of the constants AD_OUT_PI, AD_OUT_FAN, AD_OUT_RLY_1, AD_OUT_RLY_2, AD_OUT_RLY_3, AD_OUT_RLY_4\
+		state - Set true to enable an output, false to clear an output\
+	Return - none
+\fs24 \
+\
+\
+
+\f2 bool getOutput(int n)
+\f0  - 
+\fs20 Return the current output enable value based on manual control via the setOutput method and automatic mechanisms if enabled.\
+	Inputs\
+		n - One of the constants AD_OUT_PI, AD_OUT_FAN, AD_OUT_RLY_1, AD_OUT_RLY_2, AD_OUT_RLY_3, AD_OUT_RLY_4\
+	Return - true if the output is currently enabled, false if it is not\
+\
+Note: The Pi output only monitors the manual control as the Wheelchair relay control signal bypasses the ESP32 so that the Pi power can be maintained while the ESP32 is reprogrammed.\
+\
+\
+
+\f2\fs24 bool getAutoOutput(int n)
+\f0  - 
+\fs20 Return the status of an output channel based on the Relay Box inputs.\
+	Inputs\
+		n - One of the constants AD_OUT_PI, AD_OUT_FAN, AD_OUT_RLY_1, AD_OUT_RLY_2, AD_OUT_RLY_3, AD_OUT_RLY_4\
+	Return - true if the output is currently enabled, false if it is not\
+\
+Note: The Pi output only monitors the manual control as the Wheelchair relay control signal bypasses the ESP32 so that the Pi power can be maintained while the ESP32 is reprogrammed.
+\fs24 \
+\
+\
+
+\f2 bool getAutoFan()
+\f0  - 
+\fs20 Get state of automatic control of fan.\
+	Inputs - none\
+	Return - true if the fan is enabled due to automatic control.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2 \cf0 void enableAutoFan(bool state)
+\f0  - 
+\fs20 Control the automatic fan control mechanism.  When enabled the fan is automatically switched on when the temperature exceeds the threshold.\
+	Inputs\
+		state - Set true to enable automatic fan control, false to disable automatic fan control.\
+	Return - none\
+\
+Note: Automatic fan control is enabled by default.
+\fs24 \
+\
+\
+
+\f2 bool getAutoSwitch()
+\f0  - 
+\fs20 Get automatic control of the four relays state.\
+	Inputs - none\
+	Return - true if automatic control of the relays is enabled\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f2 \cf0 void enableAutoSwitch(bool state)
+\f0  - 
+\fs20 Control the automatic switch functionality.  When enabled the four relay outputs are automatically controlled by the Wheelchair relay control signals.\
+	Inputs\
+		state - Set true to enable automatic switch functionality, false to disable automatic switch functionality.\
+	Return - none\
+\
+Note: Automatic switch functionality is enabled by default.
+\fs24 \
+\
+\
+
+\f2 void setLED(RgbColor color)
+\f0  - 
+\fs20 Set the RGB LED on the KMP PRODino PCB to the specified color.\
+	Inputs\
+		color - LED color as specified by the RgbColor type in the KMPProDinoESP32 library.\
+	Return - none\
+}

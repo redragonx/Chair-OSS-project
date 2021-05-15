@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+   <key>CFBundleExecutable</key>
+   <string>picPlayer</string>
+   <key>CFBundleName</key>
+   <string>picPlayer</string>
+   <key>CFBundleIdentifier</key>
+   <string>com.danjuliodesigns.picplayer</string>
+   <key>CFBundleInfoDictionaryVersion</key>
+   <string>6.0</string>
+   <key>CFBundleVersion</key>
+   <string>1.0.0.0.0</string>
+   <key>CFBundleDevelopmentRegion</key>
+   <string>en</string>
+   <key>CFBundlePackageType</key>
+   <string>APPL</string>
+   <key>CFBundleSignature</key>
+   <string>????</string>
+   <key>NSHumanReadableCopyright</key>
+   <string></string>
+   <key>CFBundleShortVersionString</key>
+   <string>1.0.0</string>
+   <key>CFBundleIconFile</key>
+   <string>App</string>
+   <key>LSMinimumSystemVersion</key>
+   <string>10.10.0</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>CFBundleSupportedPlatforms</key><array><string>MacOSX</string></array>
+   <key>UTImportedTypeDeclarations</key>
+   <array>
+      <dict>
+         <key>UTTypeIdentifier</key>
+         <string>public.jpeg</string>
+         <key>UTTypeConformsTo</key>
+         <array>
+            <string>public.image</string>
+         </array>
+         <key>UTTypeTagSpecification</key>
+         <dict>
+            <key>public.filename-extension</key>
+            <array>
+            <string>jfif</string>
+            <string>jpe</string>
+            <string>jpeg</string>
+            <string>jpg</string>
+            </array>
+            <key>com.apple.ostype</key>
+            <array>
+               <string>JPEG</string>
+            </array>
+         </dict>
+      </dict>
+      <dict>
+         <key>UTTypeIdentifier</key>
+         <string>public.png</string>
+         <key>UTTypeConformsTo</key>
+         <array>
+            <string>public.image</string>
+         </array>
+         <key>UTTypeTagSpecification</key>
+         <dict>
+            <key>public.filename-extension</key>
+            <array>
+            <string>png</string>
+            </array>
+            <key>com.apple.ostype</key>
+            <array>
+               <string>PNG</string>
+            </array>
+         </dict>
+      </dict>
+      <dict>
+         <key>UTTypeIdentifier</key>
+         <string>public.tiff</string>
+         <key>UTTypeTagSpecification</key>
+         <dict>
+            <key>public.filename-extension</key>
+            <array>
+            <string>jfx</string>
+            <string>tif</string>
+            <string>tiff</string>
+            </array>
+            <key>com.apple.ostype</key>
+            <array>
+               <string>TIFF</string>
+            </array>
+         </dict>
+      </dict>
+   </array>
+
+</dict>
+</plist>

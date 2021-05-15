@@ -1,0 +1,1298 @@
+domain string
+install source source_path [destination destination_path] [now] [reload]
+management api http-commands
+management console
+management ssh
+management telnet
+management xmpp
+protocol http [TCP_PORT]
+protocol https [TCP_PORT]
+protocol https certificate
+server SERVER_NAME [SERVER_PORT]
+session privilege PRIV_LEVEL
+show inventory
+show xmpp neighbors
+show xmpp status
+show xmpp switch-group
+shutdown
+switch-group name SECURITY
+username name SECURITY
+vrf VRF_INSTANCE
+vrf [VRF_INSTANCE]
+xmpp send to neighbor
+xmpp session to switchgroup
+action bash command
+alias command_alias original_command
+bash
+boot test memory iterations
+comment comment_text EOF
+configure
+configure network
+copy running-config DESTINATION
+daemon daemon_name
+delay seconds
+dir [SCOPE][FILE TYPE]
+disable [PRIVILEGE_LEVEL]
+enable [PRIVILEGE_LEVEL]
+end
+memory source hardware
+event-handler name
+exit
+fips restrictions
+hostkey client strict-checking
+ip ftp [client] source-interface INTERFACE
+ip http client source-interface INTERFACE
+ip ssh [client] source-interface INTERFACE
+ip tftp [client] source-interface INTERFACE
+known-hosts SERVER ALGRORITHM key_string
+local port port_number
+logging [VRF_INSTANCE] host syslog_host [PORT] [PROT_TYPE]
+logging trap system [FACILITY_LEVEL] [CONDITION] [PROGRAM] [TEXT]
+log-level MESSAGE_LEVEL
+management security
+password minimum length characters
+platform sand fabric mode [MODE_SETTING]
+platform sand forwarding mode [MODE_SETTING]
+pwd
+remote host_addr host_port
+schedule sched_name interval PERIOD max-log-files num_files command cli_name
+secret hash ENCRYPT_TYPE
+server-alive count-max max_packet_lost
+server-alive interval keep_alive_period
+show [DATA_TYPE]
+show event-handler [handler_name]
+show management ssh hostkey ALGORITHM
+show module [MODULE_NAME]
+show platform sand compatibility
+show schedule schedule_name
+show schedule summary
+show version [INFO_LEVEL]
+shutdown
+ssh [VRF_INST] [CIPHER] [LOG_NAME] [MAC_CRYPT] [KEX] [KEY] [PORT] [VERSION] SERVER
+terminal length lines
+terminal monitor
+trigger EVENT
+tunnel tunnel_name
+aaa accounting TYPE CONNECTION MODE [METHOD_1] [METHOD_2] ... [METHOD_N]
+aaa accounting dot1x default MODE [METHOD_1] [METHOD_2] ... [METHOD_N]
+aaa accounting system default MODE [METHOD_1] [METHOD_2] ... [METHOD_N]
+aaa authentication enable default METHOD_1 [METHOD_2] ... [METHOD_N]
+aaa authentication login CONNECTION SERVICE_1 [SERVICE_2] ... [SERVICE_N]
+aaa authentication policy local allow-nopassword-remote-login
+aaa authentication policy LOGIN_TYPE log
+aaa authorization commands PRIV default SERVICE_1 [SERVICE_2] ... [SERVICE_N]
+aaa authorization config-commands
+aaa authorization console
+aaa authorization exec default METHOD_1 [METHOD_2] ... [METHOD_N]
+aaa authorization policy local default-role role_name
+aaa group server radius group_name
+aaa group server tacacs+ group_name
+aaa root SECURITY_LEVEL [ENCRYPT_TYPE] [password]
+clear aaa counters [SERVICE_TYPE]
+clear aaa counters radius
+clear aaa counters tacacs+
+[SEQ_NUM] deny [MODE_NAME] command command_name
+enable secret [ENCRYPT_TYPE] password
+ip radius [VRF_INST] source-interface INT_NAME
+ip tacacs [VRF_INST] source-interface INT_NAME
+no sequence_num
+[SEQ_NUM] permit [MODE_NAME] command command_name
+radius-server deadtime dead_interval
+radius-server host ADDR [VRF_INST][AUTH][ACCT][TIMEOUT][DEAD][RETRAN][ENCRYPT]
+radius-server key [ENCRYPT_TYPE] encrypt_key
+radius-server retransmit count
+radius-server timeout time_period
+resequence start_num inc_num
+role role_name
+server LOCATION [VRF_INST][AUTH][ACCT]
+server LOCATION [VRF_INST] [PORT]
+show aaa
+show aaa counters
+show aaa method-lists SERVICE_TYPE
+show aaa sessions
+show privilege
+show radius
+show role [ROLE_LIST]
+show tacacs
+show user-account
+show users
+tacacs-server host SERVER_ADDR [MULTIPLEX][VRF_INST][PORT][TIMEOUT][ENCRYPT]
+tacacs-server key [ENCRYPT_TYPE] encrypt_key
+tacacs-server policy unknown-mandatory-attribute ignore
+tacacs-server timeout time_period
+username name [PRIVILEGE_LEVEL] SECURITY [ROLE_USER]
+username name sshkey KEY
+banner login
+banner motd
+clear ptp interface [INTERFACE_NAME] counters
+clock set hh:mm:ss date
+clock timezone zone_name
+email
+no event-monitor [PARAMETER]
+event-monitor LOG_TYPE
+event-monitor backup max-size file_quantity
+event-monitor backup path URL_FILE
+event-monitor buffer max-size buffer_size
+event-monitor clear
+event-monitor interact
+event-monitor sync
+hostname string
+ip domain lookup [VRF_INSTANCE] source-interface INTF_NAME
+ip domain-name string
+ip host hostname hostadd_1 [hostadd_2] ... [hostadd_X]
+ip name-server [VRF_INSTANCE] SERVER_1 [SERVER_2] [SERVER_3]
+ipv6 host hostname hostadd_1 [hostadd_2] ... [hostadd_X]
+ntp authenticate
+ntp authentication-key key_id ENCRYPT_TYPE password_text
+ntp serve
+ntp serve all
+ntp server [VRF_INSTANCE] SERVER_NAME [PREFERENCE][NTP_VERSION][IP_SOURCE][burst] 
+ntp source [VRF_INSTANCE] INT_PORT
+ntp trusted-key key_list
+prompt p_string
+ptp announce interval log_interval
+ptp announce timeout to_multiplier
+ptp delay-mechanism MECH_TYPE
+ptp delay-req interval log_interval
+ptp domain domain_number
+ptp enable
+ptp forward-v1
+ptp hold-ptp-time offset
+ptp mode MODE_NAME
+ptp pdelay-neighbor-threshold link_prop
+ptp pdelay-req interval log_interval
+ptp priority1 priority_rate
+ptp priority2 priority_rate
+ptp source ip ipv4_addr
+ptp sync interval log_interval
+ptp sync timeout interval_multiplier
+ptp transport TRANSPORT_TYPE
+ptp ttl number_packets
+show banner BANNER_TYPE
+show clock
+show event-monitor arp [GROUP] [MESSAGES] [INTERFACE] [IP] [MAC] [TIME]
+show event-monitor mac [GROUP] [MESSAGES] [INTERFACE] [MAC] [TIME]
+show event-monitor route [GROUP] [MESSAGES] [IP] [TIME]
+show event-monitor sqlite statement
+show hostname
+show hosts
+show ip domain-name
+show ip name-server
+show ntp associations
+show ntp status
+show ptp
+show ptp clock
+show ptp foreign-master-record
+show ptp [INTERFACE_NAME][STATUS_FILTER]
+show ptp [INTERFACE_NAME] counters
+show ptp parent
+show ptp source ip
+show ptp time-property
+CONSOLESPEED=baud_rate
+NETDEV=interface
+PASSWORD=encrypted_string
+SWI=FILE_LOCATION
+boot console speed baud
+boot secret [ENCRYPT_TYPE] password
+boot system DEVICE file_path
+erase startup-config [CONFIRMATION]
+protocol PROTOCOL_NAME
+redundancy
+redundancy force-switchover
+reload [TARGET] [CONFIRMATION]
+reload [power] TIMEFRAME [COMMENT]
+service sequence-numbers
+show redundancy file-replication
+show redundancy states
+show redundancy switchover sso
+show reload
+show reload cause
+environment fan-speed ACTION
+environment insufficient-fans action REMEDY
+environment overheat action REMEDY
+show environment all
+show environment cooling [INFO_LEVEL]
+show environment power [INFO_LEVEL]
+show environment temperature [MODULE_NAME][INFO_LEVEL]
+flowcontrol receive STATE
+flowcontrol send STATE
+hardware port-group group_number select PORT_LIST
+interface ethernet e_range
+interface management m_range
+link-debounce time WAIT_TIME
+mac-address address
+show flowcontrol [INTERFACE]
+show hardware port-group
+show interfaces [INTERFACE] capabilities
+show interfaces [INTERFACE] counters
+show interfaces [INTERFACE] counters bins
+show interfaces [INTERFACE] counters errors
+show interfaces [INTERFACE] counters queue
+show interfaces [INTERFACE] counters rates
+show interfaces [INTERFACE] negotiation [INFO_LEVEL]
+show interfaces [INTERFACE] phy [INFO_LEVEL]
+show interfaces [INTERFACE] status [STATUS_TYPE]
+show interfaces [INTERFACE] status errdisabled
+show interfaces [INTERFACE] transceiver [DATA_FORMAT]
+show interfaces [INTERFACE] transceiver properties
+show platform fm6000 agileport map
+speed MODE
+transceiver qsfp default-mode 4x10G
+channel-group number LACP_MODE
+distribution random BALANCE_TYPE
+distribution symmetric-hash FIELD_TYPE
+fields ip IP_FIELD
+fields mac MAC_FIELD
+ingress load-balance profile profile_name
+interface port-channel p_range
+lacp port-priority priority_value
+lacp rate RATE_LEVEL
+lacp system-priority priority_value
+load-balance fm6000 profile profile_name
+load-balance policies
+port-channel hash-seed number
+port-channel lacp fallback
+port-channel lacp fallback timeout period
+port-channel load-balance HARDWARE number
+port-channel load-balance arad fields ip IP_FIELD_NAME
+port-channel load-balance fm6000 fields ip IP_FIELD_NAME
+port-channel load-balance fm6000 fields mac MAC_FIELD_NAME
+port-channel load-balance petraA fields ip IP_FIELD_NAME
+port-channel load-balance trident fields ip IP_FIELD_NAME
+port-channel load-balance trident fields ipv6 IP_FIELD_NAME
+port-channel load-balance trident fields mac MAC_FIELD_NAME
+port-channel min-links quantity
+show etherchannel [MEMBERS] [PORT_LIST] [INFO_LEVEL]
+show lacp [PORT_LIST] aggregates [PORT_LEVEL] [INFO_LEVEL]
+show lacp [PORT_LIST] counters [PORT_LEVEL] [INFO_LEVEL]
+show lacp interface [INTERFACE_PORT] [PORT_LEVEL] [INFO_LEVEL]
+show lacp [PORT_LIST] internal [PORT_LEVEL] [INFO_LEVEL]
+show lacp [PORT_LIST] neighbor [PORT_LEVEL] [INFO_LEVEL]
+show lacp sys-id [INFO_LEVEL]
+show load-balance profile [PROFILES]
+show port-channel [MEMBERS] [PORT_LIST] [INFO_LEVEL]
+show port-channel limits
+show port-channel load-balance HARDWARE fields
+show port-channel summary
+show port-channel [MEMBERS] traffic
+clear mlag tunnel counters
+domain-id identifier
+heartbeat-interval period
+local-interface vlan vlan_number
+mlag number
+mlag [configuration]
+peer-address ipv4_addr
+peer-link INT_NAME
+reload-delay [mlag] PERIOD
+reload-delay mode lacp standby
+reload-delay non-mlag PERIOD
+show mlag [INFO_LEVEL]
+show mlag interfaces [MLAGS] [INFO_LEVEL]
+show mlag interfaces members
+show mlag interfaces [MLAGS] states [STATE_NAMES] [INFO_LEVEL]
+show mlag issu warnings
+show mlag tunnel [counters]
+shutdown
+clear dot1x statistics INTERFACE_NAME
+dot1x system-auth-control
+dot1x max-reauth-req attempts
+dot1x pae authenticator
+dot1x port-control STATE
+dot1x reauthentication
+dot1x timeout quiet-period quiet_time
+dot1x timeout reauth-period reauth_time
+dot1x timeout tx-period tx_time
+show dot1x INTERFACE_NAME INFO
+show dot1x INTERFACE_NAME statistics
+show dot1x all summary
+clear lldp counters [SCOPE]
+clear lldp table
+lldp holdtime period
+lldp management-address INTERFACE
+lldp management-address vrf VRF_INSTANCE
+lldp receive
+lldp reinit delay
+lldp run
+lldp timer transmission_time
+lldp tlv-select TLV_NAME
+lldp transmit
+show lldp [INTERFACE]
+show lldp local-info [INTERFACE]
+show lldp neighbors [INTERFACE] [INFO_LEVEL]
+show lldp traffic [INTERFACE]
+dcbx application APPLICATION_TYPE priority rank
+dcbx mode ieee
+no priority-flow-control
+platform fm6000 pfc-wm [RX-PRIVATE_SIZE] [PFC-ON_WM] [PFC-OFF_WM]
+priority-flow-control mode on
+priority-flow-control priority pack-drop
+show dcbx [INTERFACE]
+show dcbx [INTERFACE] application-priority-configuration
+show dcbx [INTERFACE] priority-flow-control-configuration
+show dcbx [INTERFACE] status
+show interfaces [INTERFACE] priority-flow-control [INFO_LEVEL]
+show platform fm6000 pfc-wm
+show priority-flow-control [INT_NAME] [INFO_LEVEL]
+clear counters [INTERFACE] [SCOPE]
+clear mac address-table dynamic [VLANS] [INTERFACE]
+clear server-failure servers inactive
+control-plane
+default-profiles [LF_PROFILES]
+description label_text
+errdisable detect cause link-flap
+errdisable flap-setting cause link-flap max-flaps quantity time period
+errdisable recovery cause CONDITION
+errdisable recovery interval period
+interface loopback l_range
+ip access-group list_name [VRF_INSTANCE] DIRECTION
+link state group group_name DIRECTION
+link state track group_name
+links minimum quantity
+load-interval delay
+mac-address-table aging-time period
+mac address-table static mac_address vlan v_num DESTINATION
+monitor link-flap policy
+monitor link-flap [LF_PROFILES]
+monitor server-failure
+monitor server-failure link
+monitor session session_name destination INT_NAME
+monitor session session_name destination cpu
+monitor session session_name ip access-group acl_name
+monitor session session_name source INT_NAME DIRECTION
+monitor session s_name source INT_NAME [DIRECT] ip access-group acl_name
+monitor session session_name truncate
+mtu bytes
+network netv4_address
+no monitor session session_name
+profile PROFILE_NAME max-flaps flap_max time period [EXTENTIONS]
+proxy [lifetime time_span]
+show interfaces [INT_NAME]
+show interfaces [INT_NAME] description
+show link state group [DATA_LEVEL] [GROUPS]
+show mac address-table [ENTRY_TYPE] [MAC_ADDR] [INTF_1 ... INTF_N] [VLANS]
+show mac address-table aging-time
+show mac address-table count [VLANS]
+show mac address-table mlag-peer [ENTRY_TYPE][MAC_ADDR][INTF_1 ... INTF_N][VLANS]
+show mac address-table multicast [MAC_ADDR] [INTF] [VLANS]
+show mac address-table multicast [VLANS] brief
+show monitor server-failure
+show monitor server-failure history
+show monitor server-failure servers [SERVER_LIST]
+show monitor session SESSION_NAME
+show port-security
+show port-security address
+show port-security interface [INT_NAME]
+show storm-control [INT_NAME]
+show switch forwarding-mode
+show track [OBJECT] [INFO_LEVEL]
+shutdown
+storm-control MODE level threshold
+switch forwarding-mode MODE_SETTING
+switchport
+switchport mac address learning
+switchport port-security
+switchport port-security maximum max_addr
+track object_name interface INTERFACE_NAME PROPERTY
+[SEQ_NUM] class class_name
+class-map type tapagg match-any class_name
+mac timestamp TS_PROPERTY
+[SEQ_NUM] match ip access-group list_name
+[SEQ_NUM] match [VLAN_TAG] ip SOURCE_ADDR [SOURCE_PORT] DEST_ADDR [DEST_PORT]
+mode TAP_MODE
+mode exclusive no-errdisable INT_NAME
+platform fm6000 keyframe kf_name device device_id
+platform fm6000 keyframe kf_name interface ethernet e_range ipv4_addr mac_addr
+platform fm6000 keyframe kf_name rate tx_rate
+platform fm6000 keyframe kf_name source ip ipv4_addr
+policy-map type tapagg map_name
+resequence [start_num [inc_num]]
+service-policy type tapagg TRAFFIC_DIRECTION policymap_name
+set SET_VALUE
+show interfaces [INTERFACE] tap [INFO_LEVEL]
+show interfaces [INTERFACE] tool
+show platform fm6000 keyframe [KEYFRAME_ID]
+show tap aggregation groups [INFO_LEVEL] [GROUP_NAMES]
+switchport tap allowed vlan EDIT_ACTION
+switchport tap default group group_name
+switchport tap identity port_id
+switchport tap native vlan v_num
+switchport tap truncation packet_size
+switchport tool allowed vlan EDIT_ACTION
+switchport tool group EDIT_ACTION
+switchport tool identity dot1q
+tap aggregation
+autostate
+encapsulation dot1q vlan vlan_id
+interface vlan v_range
+l2-protocol encapsulation dot1q vlan vlan_id
+name label_text
+private-vlan [VLAN_TYPE] primary vlan v_num
+private-vlan mapping EDIT_ACTION
+show dot1q-tunnel [INTERFACE]
+show interfaces [INT_NAME] private-vlan mapping
+show interfaces [INTERFACE] switchport
+show interfaces [INTERFACE] switchport backup
+show interfaces [INTERFACE] trunk
+show interfaces [INT_NAME] vlans
+show vlan [VLAN_LIST] [PORT_ACTIVITY]
+show vlan dynamic
+show vlan internal allocation policy
+show vlan internal usage
+show vlan private-vlan
+show vlan summary
+show vlan [VLAN_LIST] trunk group
+state OPERATION_STATE
+switchport access vlan v_num
+switchport mode MODE_TYPE
+switchport private-vlan mapping EDIT_ACTION
+switchport trunk allowed vlan EDIT_ACTION
+switchport trunk group group_name
+switchport trunk native vlan VLAN_ID
+switchport vlan mapping [DIRECTION] source_vlan dest_vlan
+trunk group name
+vlan vlan_range
+vlan internal allocation policy DIRECTION [RANGE_VLAN]
+clear vxlan counters ROUTE_TYPE
+interface vxlan vx_range
+ip address virtual ipv4_subnet
+show vxlan address-table [ENTRY_TYPE][MAC_ADDR][VLANS][REMOTE_VTEP]
+show vxlan counters ROUTE_TYPE
+show vxlan flood vtep [VLANS]
+show vxlan vtep
+vxlan [ACCESS_VNI] flood vtep [MODIFY] VTEP_1 [VTEP_2] ... [VTEP_N]
+vxlan multicast-group group_addr
+vxlan source-interface INT_NAME
+vxlan udp-port port_id
+vxlan vlan vlan_id vni vni_id
+vxlan vni notation dotted
+clear ip access-lists counters [ACL_NAME] [SCOPE]
+clear ipv6 access-lists counters [ACL_NAME] [SCOPE]
+continue NEXT_SEQ
+[SEQ_NUM] deny PROTOCOL SOURCE_ADDR [SOURCE_PORT] DEST_ADDR [DEST_PORT]
+[SEQ_NUM] deny PROT SRC_ADDR [SRC_PT] DEST_ADDR [DEST_PT][FLAG][MSG][HOP] 
+[SEQUENCE] deny ipv6_prefix [MASK]
+[SEQ_NUM] deny SOURCE_ADDR DEST_ADDR [PROTOCOL] [log]
+[SEQ_NUM] deny SOURCE_ADDR [log]
+[SEQ_NUM] deny SOURCE_ADDR
+description label_text
+ip access-group list_name DIRECTION
+ip access-list list_name
+ip access-list standard list_name
+ip prefix-list list_name [SEQUENCE] FILTER_TYPE network_addr [MASK]
+ipv6 access-group list_name DIRECTION
+ipv6 access-list list_name
+ipv6 access-list standard list_name
+ipv6 prefix-list list_name
+mac access-group list_name DIRECTION
+mac access-list list_name
+match CONDITION
+no line_num
+[SEQ_NUM] permit PROTOCOL SOURCE_ADDR [SOURCE_PORT] DEST_ADDR [DEST_PORT]
+[SEQ_NUM] permit PROT SRC_ADDR [SRC_PT] DEST_ADDR [DEST_PT][FLAG][MSG][HOP] 
+[SEQUENCE] deny ipv6_prefix [MASK]
+[SEQ_NUM] permit SOURCE_ADDR DEST_ADDR [PROTOCOL] [log]
+[SEQ_NUM] permit SOURCE_ADDR [log]
+[SEQ_NUM] permit SOURCE_ADDR
+remark text
+resequence [start_num [inc_num]]
+route-map map_name [FILTER_TYPE] [sequence_number]
+no seq line_num
+set CONDITION
+set community COND_1 [COND_2] [COND_N][MOD_TYPE]
+set extcommunity COND_1 [COND_2] [COND_N][MOD_TYPE]
+show
+show ip access-list [LIST] [SCOPE]
+show ip prefix-list [DISPLAY_ITEMS]
+show ipv6 access-list [LIST] [SCOPE]
+show ipv6 prefix-list [DISPLAY_ITEMS]
+show mac access-lists [LIST] [SCOPE]
+show route-map [MAP]
+statistics per-entry
+ip fhrp accept-mode
+ip virtual-router address ipv4_addr
+ip virtual-router mac-address mac_addr
+ip virtual-router mac-address advertisement-interval period
+ipv6 virtual-router address net_addr
+no vrrp group
+show ip virtual-router
+show ipv6 virtual-router
+show vrrp [INFO_LEVEL] [STATES]
+show vrrp internal
+vrrp group authentication AUTH_PARAMETER
+vrrp group delay reload [INTERVAL]
+vrrp group description label_text
+vrrp group ip ipv4_address
+vrrp group ip ipv4_addr secondary
+vrrp group ip version VERSION_NUMBER
+vrrp group ip ipv6_address
+vrrp group mac-address advertisement-interval period
+vrrp group preempt
+vrrp group preempt delay [MINIMUM_INTERVAL] [RELOAD_INTERVAL]
+vrrp group priority level
+vrrp group shutdown
+vrrp group timers advertise adv_time
+vrrp group track object_name ACTION amount
+abort
+clear spanning-tree counters [INT_NAME]
+clear spanning-tree counters session
+clear spanning-tree detected-protocols [INT_NAME]
+exit
+instance mst_inst vlans v_range
+name label_text
+revision rev_number
+show [EDIT_VERSION]
+show spanning-tree [VLAN_ID] [INFO_LEVEL]
+show spanning-tree blockedports
+show spanning-tree bridge [INFO_LEVEL]
+show spanning-tree counters
+show spanning-tree interface INT_NAME [INFO_LEVEL]
+show spanning-tree mst [INSTANCE] [INFO_LEVEL]
+show spanning-tree mst configuration [INFO_LEVEL]
+show spanning-tree mst [INSTANCE] interface INT_NAME [INFO_LEVEL]
+show spanning-tree mst test information
+show spanning-tree root [INFO_LEVEL]
+show spanning-tree topology [VLAN_NAME] status [INFO_LEVEL]
+spanning-tree bpdufilter FILTER_STATUS
+spanning-tree bpduguard GUARD_ACTION
+spanning-tree bpduguard rate-limit count max_bpdu [TIMER]
+spanning-tree bpduguard rate-limit default
+spanning-tree bpduguard rate-limit enable
+spanning-tree bridge assurance
+spanning-tree MODE cost value
+spanning-tree forward-time period
+spanning-tree guard PORT_MODE
+spanning-tree hello-time period
+spanning-tree link-type TYPE
+spanning-tree loopguard default
+spanning-tree max-age period
+spanning-tree max-hops ports
+spanning-tree mode VERSION
+spanning-tree mst configuration
+spanning-tree portchannel guard misconfig
+spanning-tree portfast
+spanning-tree portfast auto
+spanning-tree portfast bpdufilter default
+spanning-tree portfast bpduguard default
+spanning-tree portfast PORT_MODE
+spanning-tree [MODE] port-priority value
+spanning-tree [MODE] priority level
+spanning-tree [MODE] root TYPE
+spanning-tree transmit hold-count max_bpdu
+spanning-tree vlan v_range
+switchport backup interface INT_NAME [BALANCE]
+bandwidth guaranteed rate DATA_MIN
+bandwidth percent proportion
+bandwidth percent proportion
+mc-tx-queue queue_level
+platform petraA [CHIP_NAME] traffic-class tc_value
+priority strict
+priority strict
+qos cos cos_value
+qos dscp dscp_value
+qos trust MODE
+qos map cos cos_num_1 [cos_num_2 ... cos_num_n] to traffic-class tc_value
+qos map dscp dscpv_1 [dscpv_2 ... dscpv_n] to traffic-class tc_value
+qos map traffic-class tc_num_1 [tc_num_2 ... tc_num_n] to cos cos_value
+qos map traffic-class tc_num_1 [tc_num_2 ... tc_num_n] to dscp dscp_value
+qos map traffic-class tc_num_1 [tc_num_2 ... tc_num_n] to mc-tx-queue mtq_value
+qos map traffic-class tc_num_1 [tc_num_2 ... tc_num_n] to tx-queue txq_value
+qos map traffic-class tc_num_1 [tc_num_2 ... tc_num_n] to uc-tx-queue utq_value
+qos random-detect ecn global-buffer minimum-threshold MIN maximum-threshold MAX
+qos rewrite cos
+qos rewrite dscp
+random-detect ecn minimum-threshold MIN maximum-threshold MAX
+shape rate byte_limit [kbps]
+shape rate DATA_LIMIT
+shape rate DATA_LIMIT
+shape rate byte_limit [kbps]
+shape rate byte_limit [kbps]
+shape rate byte_limit
+shape rate byte_limit [kbps]
+show platform petraA traffic-class
+show qos interfaces INTERFACE_NAME
+show qos interfaces [INTERFACE_NAME] random-detect ecn 
+show qos maps
+show qos random-detect ecn
+show qos interfaces [INTERFACE_NAME] trust
+tx-queue queue_level
+tx-queue queue_level
+uc-tx-queue queue_level
+bandwidth kbps kbits
+bandwidth pps packets
+bandwidth kbps kbits
+bandwidth pps packets
+class class_name
+class class_name
+class class_name [PLACEMENT]
+class class_name
+[sequence_number] class class_name
+class class_name [PLACEMENT]
+class-map type control-plane match-any class_name
+class-map type pbr match-any map_name
+class-map [type qos] match-any class_name
+clear policy-map INTERFACE_NAME counters MAP_NAME
+match ip access-group list_name
+match IP_VERSION access-group list_name
+[sequence_number] match ip access-group list_name
+match IP_VERSION access-group list_name
+[sequence_number] match ip SOURCE_ADDR DEST_ADDR [set nexthop [recursive] 
+policy-map type control-plane copp-system-policy
+policy-map type pbr map_name
+policy-map [type qos] map_name
+resequence [start_num [inc_num]]
+service-policy type pbr TRAFFIC_DIRECTION map_name
+service-policy [type qos] TRAFFIC_DIRECTION map_name
+set QOS_TYPE value
+set nexthop [recursive] NH-addr_1 [NH-addr_2] ... [NH-addr_n]
+shape kbps kbits
+shape pps packets
+shape kbps kbits
+shape pps packets
+show class-map type control-plane [MAP_NAME]
+show class-map type pbr [map_name]
+show class-map [type qos] [MAP_NAME]
+show policy-map type control-plane copp-system-policy [CMAP_NAME]
+show policy-map type pbr [PMAP_NAME] [DATA_LEVEL]
+show policy-map [type qos] [PMAP_NAME [CMAP_NAME]]
+show policy-map [type qos] pmap_name [TRAFFIC] counters [INFO_LEVEL]
+show policy-map interface control-plane copp-system-policy
+show policy-map interface INTERFACE_NAME [type qos] [TRAFFIC]
+show policy-map [INTERFACE_NAME] [type qos] [TRAFFIC] counters
+arp [VRF_INSTANCE] ipv4_addr mac_addr arpa
+arp cache persistent
+arp timeout arp_time
+clear arp-cache [VRF_INSTANCE][INTERFACE_NAME]
+clear ip arp [VRF_INSTANCE] ipv4_addr
+clear ip dhcp relay counters [INTERFACE_NAME]
+clear ip dhcp snooping counters [COUNTER_TYPE]
+clear ip nat translation [HOST_ADDR [DEST_ADDR]] [INTF] [PROT_TYPE]
+description label_text
+ip address ipv4_subnet [PRIORITY]
+ip dhcp relay always-on
+ip dhcp relay information option
+ip dhcp relay information option circuit-id id_label
+ip dhcp smart-relay
+ip dhcp smart-relay global
+ip dhcp snooping
+ip dhcp snooping information option
+ip dhcp snooping vlan v_range
+ip hardware fib ecmp resilience net_addr capacity nhop_max redundancy duplicates
+ip helper-address ipv4_addr
+ip icmp redirect
+ip load-sharing HARDWARE seed
+ip local-proxy-arp
+ip nat destination static ORIGINAL [FILTER] TRANSLATED [PROT_TYPE]
+ip nat pool pool_name [ADDRESS_SPAN] SUBNET_SIZE
+ip nat source dynamic access-list acl_name POOL_TYPE
+ip nat source static ORIGINAL [FILTER] TRANSLATED [PROT_TYPE]
+ip nat translation low-mark threshold
+ip nat translation max-entries connections
+ip nat translation tcp-timeout period
+ip nat translation udp-timeout period
+ip proxy-arp
+ip route [VRF_INSTANCE] dest_net NEXTHOP [DISTANCE] [TAG_OPTION] [RT_NAME]
+ip routing [VRF_INSTANCE]
+ip verify unicast source reachable-via RPF_MODE
+platform trident forwarding-table partition SIZE
+platform trident routing-table partition SIZE
+rd admin_ID:local_assignment
+routing-context vrf [VRF_ID]
+show arp [VRF_INST][FORMAT][HOST_ADD][HOST_NAME][INTF][MAC_ADDR][DATA]
+show ip
+show ip arp [VRF_INST][FORMAT][HOST_ADD][HOST_NAME][INTF][MAC_ADDR][DATA]
+show ip dhcp relay
+show ip dhcp relay counters
+show ip dhcp snooping
+show ip dhcp snooping counters [COUNTER_TYPE]
+show ip dhcp snooping hardware
+show ip helper-address
+show ip interface [INTERFACE_NAME][VRF_INST]
+show ip interface [INTERFACE_NAME][VRF_INST] brief
+show ip nat access-list [INTF] [LISTS]
+show ip nat pool POOL_SET
+show ip nat translations [INTF][ADDR][TYPE][DIR][H_STATE][K_STATE][V_STATE]
+show ip route [VRF_INSTANCE][ADDRESS][ROUTE_TYPE][INFO_LEVEL][PREFIX]
+show ip route ADDRESS age
+show ip route [VRF_INSTANCE] gateway
+show ip route [VRF_INSTANCE] host
+show ip route [VRF_INSTANCE] summary
+show ip route [VRF_INSTANCE] ADDRESS tag
+show platform trident forwarding-table partition 
+show routing-context vrf
+show vrf [VRF_INSTANCE]
+vrf definition vrf_name
+vrf forwarding vrf_name
+clear ipv6 dhcp relay counters [PORT]
+clear ipv6 neighbors [PORT] [DYNAMIC_IPV6]
+ipv6 address ipv6_prefix
+ipv6 dhcp relay always-on
+ipv6 dhcp relay destination ipv6_addr
+ipv6 enable
+ipv6 hardware fib aggregate-address ipv6_prefix summary-only software-forward
+ipv6 hardware fib ecmp resilience net_prfx capacity nhop_max redundancy duplicate
+ipv6 hardware fib nexthop nxthop_index [PREFIX]
+ipv6 helper-address ipv6_addr
+ipv6 nd managed-config-flag
+ipv6 nd ns-interval period
+ipv6 nd other-config-flag
+ipv6 nd prefix ipv6_prefix LIFETIME [FLAGS]
+ipv6 nd ra dns-server ipv6_addr SERVER_LIFE
+ipv6 nd ra dns-servers lifetime period
+ipv6 nd ra dns-suffix domain SUFFIX_LIFE
+ipv6 nd ra dns-suffixes lifetime period
+ipv6 nd ra hop-limit quantity
+ipv6 nd ra interval [SCALE] ra_period [minimum_period]
+ipv6 nd ra lifetime ra_lifetime
+ipv6 nd ra mtu suppress
+ipv6 nd ra suppress [SCOPE]
+ipv6 nd reachable-time period
+ipv6 nd router-preference RANK
+ipv6 neighbor ipv6_addr PORT mac_addr
+ipv6 neighbor cache persistent
+ipv6 route dest_prefix NEXTHOP [DISTANCE] [TAG_OPT] [RT_NAME]
+ipv6 unicast-routing
+ipv6 verify unicast source reachable-via RPF_MODE
+show ipv6 dhcp relay counters
+show ipv6 address fib aggregate-address [ADDRESS][RESTRICTION]
+show ipv6 helper-address
+show ipv6 interface [INTERFACE_NAME] [INFO_LEVEL]
+show ipv6 nd ra internal state [INTERFACE_NAME]
+show ipv6 neighbors [PORT] [SOURCE] [INFO_LEVEL]
+show ipv6 route [ADDRESS] [ROUTE_TYPE] [INFO_LEVEL]
+show ipv6 route ADDRESS age
+show ipv6 route host
+show ipv6 route [ADDRESS] interface PORT_NAME [INFO_LEVEL]
+show ipv6 route summary
+show ipv6 route ADDRESS tag
+adjacency exchange-start threshold peers
+area area_id default-cost def_cost
+area area_id filter net_addr
+area area_id nssa [TYPE]
+area area_id nssa default-information-originate [VALUE][TYPE][EXCL]
+area area_id nssa no-summary
+area area_id nssa translate type7 always
+area area_id range net_addr [ADVERTISE_SETTING][COST_SETTING]
+area area_id stub [summarize]
+auto-cost reference-bandwidth rate
+clear ip ospf [PROCESS_ID] neighbor[LOCATION] [VRF_INSTANCE]
+compatible rfc1583
+default-information originate [FORCE][VALUE][TYPE][MAP]
+distance ospf AREA_TYPE distance
+ip ospf authentication [METHOD]
+ip ospf authentication-key [ENCRYPT_TYPE] key_text
+ip ospf cost interface_cost
+ip ospf dead-interval time
+ip ospf hello-interval time
+ip ospf message-digest-key key_id md5 ENCRYPT_TYPE key_text
+ip ospf name-lookup
+ip ospf network point-to-point
+ip ospf priority priority_level
+ip ospf retransmit-interval period
+ip ospf shutdown
+ip ospf transmit-delay trans
+log-adjacency-changes
+max-lsa lsa_num [WARNING] [IGNORE_TIME] [IGNORE_COUNT] [RESET]
+max-metric router-lsa [EXTERNAL][STUB][STARTUP][SUMMARY]
+maximum-paths paths
+network ipv4_subnet area area_id
+no area area_id [TYPE]
+passive-interface default
+passive-interface INTERFACE_NAME
+point-to-point routes
+redistribute ROUTE_TYPE [ROUTE_MAP]
+router-id identifier
+router ospf process_id [VRF_INSTANCE]
+show ip ospf [PROCESS_ID] [VRF_INSTANCE]
+show ip ospf border-routers [VRF_INSTANCE]
+show ip ospf [AREA] database database-summary [VRF_INSTANCE]
+show ip ospf [AREA] database [ROUTER] [VRF_INSTANCE]
+show ip ospf [AREA] database LINKSTATE_TYPE linkstate_id [ROUTER] [VRF_INSTANCE]
+show ip ospf [PROCESS_ID] interface [INTERFACE_NAME] [VRF_INSTANCE]
+show ip ospf [PROCESS_ID] interface brief [VRF_INSTANCE]
+show ip ospf [PROCESS_ID] ospf-log
+show ip ospf [PROCESS_ID] neighbor [INTERFACE_NAME][NEIGHBOR][DATA][VRF_INSTANCE]
+show ip ospf neighbor [INTERFACE_NAME] [NEIGHBOR] adjacency-changes 
+show ip ospf neighbor state STATE_NAME [VRF_INSTANCE]
+show ip ospf [PROCESS_ID] neighbor summary [VRF_INSTANCE]
+show ip ospf request-list [VRF_INSTANCE]
+show ip ospf retransmission-list [VRF_INSTANCE]
+show ip ospf [PROCESS_ID] ospf-log
+shutdown
+timers lsa arrival lsa_time
+timers spf spf_time
+timers throttle lsa all initial_delay min_hold max_wait
+timers throttle spf initial_delay min_hold max_wait
+adjacency exchange-start threshold peers
+area area_id default-cost def_cost
+area area_id nssa [TYPE]
+area area_id nssa default-information-originate [VALUE][TYPE][EXCL]
+area area_id nssa translate type7 always
+area area_id range net_addr [ADVERTISE_SETTING] [COST_SETTING]
+area area_id stub
+clear ipv6 ospf force-spf
+default-information originate [DURATION][VALUE][TYPE][MAP]
+default-metric def_metric
+distance ospf intra-area distance
+ipv6 ospf process_id area area_id
+ipv6 ospf cost interface_cost
+ipv6 ospf dead-interval time
+ipv6 ospf hello-interval time
+ipv6 ospf network point-to-point
+ipv6 ospf priority priority_level
+ipv6 ospf retransmit-interval period
+ipv6 ospf transmit-delay trans
+ipv6 router ospf process_id
+log-adjacency-changes [INFO_LEVEL]
+max-metric router-lsa [EXTERNAL][STUB][STARTUP][SUMMARY]
+maximum-paths paths
+no area area_id [TYPE]
+passive-interface INTERFACE_NAME
+redistribute ROUTE_TYPE [ROUTE_MAP]
+router-id identifier
+show ipv6 ospf
+show ipv6 ospf border-routers
+show ipv6 ospf database [FILTER] LINK_TYPE [LINKSTATE_ID][ROUTER][DATA_LEVEL]
+show ipv6 ospf database [FILTER] [LINKSTATE_ID] [ROUTER] [DATA_LEVEL]
+show ipv6 ospf database link [LINKSTATE_ID] [ROUTER] [DATA_LEVEL]
+show ipv6 ospf database link if-name INTF_ID [LS_ID] [ROUTER] [DATA_LEVEL]
+show ipv6 ospf database link if-type [INTF_TYPE] [LS_ID] [ROUTER] [DATA_LEVEL]
+show ipv6 ospf interface
+show ipv6 ospf neighbor
+show ip ospf neighbor state STATE_NAME
+show ip ospf neighbor summary
+shutdown
+timers spf spf_time
+bgp ADDRESS_TYPE
+aggregate-address AGGREGATE_NET [AS_SET][SUMMARY][ATTRIBUTE_MAP]
+bgp client-to-client reflection
+bgp cluster-id ID_NUM
+bgp confederation identifier as_number
+bgp confederation peers as_range
+bgp default ADDRESS_FAMILY
+bgp listen limit maximum
+bgp listen range NET_ADDRESS peer-group group_name remote-as as_number
+bgp log-neighbor-changes
+bgp redistribute internal
+clear ip bgp [ACTION] [RESET_TYPE] [DATA_FLOW] [VRF_INSTANCE]
+clear ip bgp neighbor * [VRF_INSTANCE]
+clear ipv6 bgp [ACTION][RESET_TYPE][DATA_FLOW][VRF_INSTANCE]
+clear ipv6 bgp neighbor * [VRF_INSTANCE]
+distance bgp external_dist [INTERNAL_LOCAL]
+graceful-restart stalepath-time interval
+graceful-restart helper
+ip as-path access-list list_name FILTER_TYPE regex ORIGIN
+ip as-path regex-mode MODE_SETTING
+ip community-list expanded listname FILTER_TYPE R_EXP
+ip community-list standard listname FILTER_TYPE COMM_1 [COMM_2...COMM_n]
+ip extcommunity-list expanded listname FILTER_TYPE R_EXP
+ip extcommunity-list standard listname FILTER_TYPE COMM_1 [COMM_2...COMM_n]
+maximum-paths paths [ecmp ecmp_paths]
+neighbor NEIGHBOR_ID activate
+neighbor NEIGHBOR_ID allowas-in [asn_quantity]
+neighbor NEIGHBOR_ID default-originate [MAP]
+neighbor NEIGHBOR_ID description description_string
+neighbor NEIGHBOR_ID ebgp-multihop [hop_number]
+neighbor NEIGHBOR_ID export-localpref preference
+neighbor NEIGHBOR_ID graceful-restart helper
+neighbor NEIGHBOR_ID import-localpref preference
+neighbor NEIGHBOR_ID local-as as_id no-prepend replace-as
+neighbor NEIGHBOR_ID local-v6-addr ipv6_local
+neighbor NEIGHBOR_ID maximum-routes quantity [ACTION]
+neighbor NEIGHBOR_ID next-hop-peer
+neighbor NEIGHBOR_ID next-hop-self
+neighbor NEIGHBOR_ID out-delay delay_time
+neighbor NEIGHBOR_ID password [ENCRYPT_LEVEL] key_text
+neighbor group_name peer-group
+neighbor NEIGHBOR_ADDR peer-group group_name
+neighbor NEIGHBOR_ID remote-as as_id
+neighbor NEIGHBOR_ID remove-private-as [REMOVAL]
+neighbor NEIGHBOR_ID route-map map_name DIRECTION
+neighbor NEIGHBOR_ID route-reflector-client
+neighbor NEIGHBOR_ID send-community
+neighbor NEIGHBOR_ID shutdown
+neighbor NEIGHBOR_ID soft-configuration inbound [SCOPE]
+neighbor NEIGHBOR_ID timers keep_alive hold_time
+neighbor NEIGHBOR_ID transport connection-mode passive
+neighbor NEIGHBOR_ID update-source INTERFACE
+neighbor NEIGHBOR_ID weight weight_value
+network NET_ADDRESS [ROUTE_MAP]
+no neighbor NEIGHBOR_ID
+redistribute ROUTE_TYPE [ROUTE_MAP]
+router-id id_num
+router bgp as_id
+show ip bgp [VRF_INSTANCE]
+show ip as-path access-list [list_name]
+show ip bgp [FILTER] [VRF_INSTANCE]
+show ip bgp community [COMM_1 ... COMM_n][MATCH_TYPE][DATA_OPTION][VRF_INSTANCE]
+show ip bgp neighbors [NEIGHBOR_ADDR][VRF_INSTANCE]
+show ip bgp neighbors neighbor_addr RTE [FILTER] [VRF_INSTANCE]
+show ip bgp neighbors addr RTE community CM_1 [CM_2 ..CM_n][MATCH][INFO][VRF_INST]
+show ip bgp neighbors addr RTE regexp as_paths [VRF_INST]
+show ip bgp paths [VRF_INSTANCE]
+show ip bgp peer-group [GROUPS][VRF_INSTANCE]
+show ip bgp regexp as_paths [VRF_INSTANCE]
+show ip bgp summary [VRF_INSTANCE]
+show ip community-list [COMMUNITY_LIST]
+show ip extcommunity-list [COMMUNITY_LIST]
+show ipv6 bgp [FILTER][VRF_INSTANCE]
+show ipv6 bgp community [COMM_1 ... COMM_n][MATCH_TYPE][INFO][VRF_INSTANCE]
+show ipv6 bgp neighbor [NEIGHBOR_ADDR][VRF_INSTANCE]
+show ipv6 bgp neighbors neighbor_addr ROUTE_TYPE [FILTER] [VRF_INSTANCE]
+show ipv6 bgp neighbors adr RTE community CM_1 [CM_2..CM_n][MATCH][INFO][VRF_INST]
+show ipv6 bgp neighbors addr RTE regexp as_paths [VRF_INST]
+show ipv6 bgp regexp as_paths [VRF_INSTANCE]
+show ipv6 bgp summary [VRF_INSTANCE]
+shutdown
+timers bgp keep_alive hold_time
+default-metric metric_value
+distance distance_value
+distribute-list DIRECTION MAP [INTF]
+ip rip v2-broadcast
+network NETWORK_ADDRESS
+redistribute connected ROUTE_MAP
+router rip
+show ip rip database [FILTER]
+show ip rip neighbors
+shutdown
+timers basic update_time expire_time deletion_time
+isis ADDRESS_FAMILY [TRANSMISSION]
+isis enable instance_id
+isis hello-interval time
+isis hello-multiplier factor
+isis lsp-interval period
+isis metric metric_cost
+ip isis network point-to-point
+isis passive
+isis priority priority_level
+is-type LAYER_VALUE
+log-adjacency-changes
+net mask_hex
+passive-interface INTERFACE_NAME
+redistribute ROUTE_TYPE
+router isis instance_name [VRF_INSTANCE]
+set-overload-bit TIMING
+show isis database [INSTANCES] [INFO_LEVEL]
+show isis interface [INSTANCES] [INTERFACE_NAME] [INFO_LEVEL]
+show isis neighbor [INSTANCES] [INFO_LEVEL]
+show isis [INSTANCES] summary
+show isis topology
+shutdown
+spf-interval period
+entry index tunnel-destination ipv4_address
+ip decap-group group_name
+ip route [VRF_INST] dest_net nexthop-group nhgp_name [dist] [TAG_OPTION] [RT_NAME]
+mpls routing
+mpls static top-label top_tag [DEST_INTF] NEXTHOP_ADDR ACTION [PRIORITY]
+nexthop-group group_name
+show mpls [INFO_LEVEL] route [header_label]
+show mpls route summary
+show role nhgroup_name [VRF_INST]
+size entry_size
+ttl hop_expiry
+tunnel decap-ip ipv4_address
+tunnel-source SOURCE
+tunnel type gre
+bfd interval transmit_rate min_rx receive_minimum multiplier factor
+bfd all-interfaces
+ip ospf bfd
+ip pim bfd
+ip pim bfd-instance
+neighbor NEIGHBOR_ID fall-over bfd
+show bfd neighbors [INFO_LEVEL]
+vrrp group bfd ip ipv4_address
+clear ip mfib fastdrop
+clear ip mroute ENTRY_LIST
+ip mfib activity polling-interval period
+ip mfib cache-entries unresolved max quantity_entries
+ip mfib fastdrop
+ip mfib max-fastdrops quantity
+ip mfib packet-buffers unresolved max quantity_packets
+ip multicast boundary SUB_NET [TCAM]
+ip multicast multipath none
+ip multicast-routing
+show ip mfib [ROUTE]
+show ip mfib software [INFO_LEVEL][ROUTE]
+show ip mroute
+show ip mroute count
+clear ip igmp group [gp_addr] [interface INT_ID]
+clear ip igmp snooping counters [INT_NAME]
+clear ip igmp statistics [INTF_ID]
+ip igmp host-proxy [GROUP_ADDRESS [SOURCE_ADDRESS]]
+ip igmp host-proxy report-interval period
+ip igmp last-member-query-count number
+ip igmp last-member-query-interval period
+ip igmp profile profile_name
+ip igmp query-interval period
+ip igmp query-max-response-time period
+ip igmp router-alert DISPOSITION
+ip igmp snooping
+ip igmp snooping filter profile_name
+ip igmp snooping querier
+ip igmp snooping querier address ipv4_address
+ip igmp snooping querier last-member-query-count number
+ip igmp snooping querier last-member-query-interval period
+ip igmp snooping querier max-response-time resp_sec
+ip igmp snooping querier query-interval query_sec
+ip igmp snooping querier startup-query-count number
+ip igmp snooping querier startup-query-interval period
+ip igmp snooping querier version version_number
+ip igmp snooping report-flooding
+ip igmp snooping report-flooding switch-port INTERFACE
+ip igmp snooping restart query-interval query_sec
+ip igmp snooping robustness-variable robust_value
+ip igmp snooping vlan v_range
+ip igmp snooping vlan v_range immediate-leave
+ip igmp snooping vlan v_range max-groups quantity
+ip igmp snooping vlan v_range mrouter interface STATIC_INT
+ip igmp snooping vlan v_range querier
+ip igmp snooping vlan v_range querier address ipv4_address
+ip igmp snooping vlan v_range querier last-member-query-count number
+ip igmp snooping vlan v_range querier last-member-query-interval period
+ip igmp snooping vlan v_range querier max-response-time resp_sec
+ip igmp snooping vlan v_range querier query-interval query_sec
+ip igmp snooping vlan v_range querier startup-query-count number
+ip igmp snooping vlan v_range querier startup-query-interval period
+ip igmp snooping vlan v_range querier version version_number
+ip igmp snooping vlan v_range report-flooding
+ip igmp snooping vlan v_range report-flooding switch-port INTERFACE
+ip igmp snooping vlan v_num static ipv4_addr interface STATIC_INT
+ip igmp startup-query-count number
+ip igmp startup-query-interval period
+ip igmp static-group group_address [SOURCE_ADDRESS]
+ip igmp static-group acl list_name
+ip igmp static-group range GROUP_ADDR [SOURCE_ADDR]
+ip igmp version version_number
+permit
+range init_address [UPPER_RANGE]
+show ip igmp groups GROUP_LIST [DATA]
+show ip igmp groups [GROUP_LIST] count
+show ip igmp host-proxy config-sanity
+show ip igmp host-proxy interface GROUP_LIST [DATA]
+show ip igmp interface [INT_NAME]
+show ip igmp snooping [PROFILES]
+show ip igmp snooping [VLAN_ID]
+show ip igmp snooping counters [DATA_TYPE][DATA_LEVEL]
+show ip igmp snooping counters ethdev-pams
+show ip igmp snooping groups [VLAN_ID][PORT_INT][GROUPS][DATA]
+show ip igmp snooping groups [VLAN_ID][PORT_INT] count [DATA]
+show ip igmp snooping mrouter [VLAN_ID] [DATA]
+show ip igmp snooping querier [STATUS][VLAN_ID][DATA]
+show ip igmp querier counters [VLAN_ID]
+show ip igmp querier membership [VLAN_ID [GROUP_LIST]]
+show ip igmp snooping report-flooding [VLAN_ID][DATA]
+show ip igmp static-groups [INFO_LEVEL] [interface INT_NAME]
+show ip igmp static-groups acl
+show ip igmp static-groups group [GROUP_LIST]
+show ip igmp statistics [INTERFACE_ID]
+ip pim anycast-rp rp_addr peer_addr [REGISTER]
+ip pim border-router
+ip pim bsr-border
+ip pim bsr-candidate INTERFACE [PRIORITY_NUM] [INTERVAL_PERIOD]
+ip pim bsr-holdtime period
+ip pim dr-priority level
+ip pim join-prune-interval period
+ip pim log-neighbor-changes
+ip pim neighbor-filter access_list
+ip pim query-interval period
+ip pim register-source INT_NAME
+ip pim rp-address rp_addr [MULTICAST_SUBNET] [BSR_OVERRIDE]
+The INTERFACE parameter is always listed first. All other parameters can be placed in any order.
+ip pim sparse-mode
+ip pim sparse-mode sg-expiry-timer period
+ip pim spt-threshold JOIN
+ip pim spt-threshold JOIN group-list acl_name
+ip pim ssm range [ACCESS_RANGE]
+show ip pim bsr [GROUP_FILTER]
+show ip pim config-sanity
+show ip pim interface [INT_NAME] [INFO_LEVEL]
+show ip pim neighbor [INT_NAME] [BFD_DATA]
+show ip pim protocol counters [INT_NAME]
+show ip pim register-source
+show ip pim rp
+show ip pim rp-candidate
+show ip pim rp-hash ipv4_addr [INFO_LEVEL]
+show ip pim upstream joins [JOIN_ADDRESSES] [NEIGHBOR_FILTER]
+clear ip msdp sa-cache [ADDRESS_FILTER]
+ip msdp cache-sa-state
+ip msdp default-peer peer_id [PREFIX]
+ip msdp peer_id description description_string
+ip msdp group-limit quantity source src_subnet
+ip msdp keepalive peer_id keep_alive hold_time
+ip msdp mesh-group group_name peer_id
+ip msdp originator-id INTERFACE
+ip msdp peer peer_id [CONNECTION]
+ip msdp rejected-limit quantity
+ip msdp sa-filter in peer_id list list_name
+ip msdp sa-filter out peer_id list list_name
+ip msdp sa-limit peer_id quantity
+ip msdp peer_id shutdown
+ip msdp timer connect_retry
+show ip msdp mesh-group
+show ip msdp peer [PEER_ADDR] [SA_ACCEPT]
+show ip msdp pim sa-cache
+show ip msdp peer rp_addr
+show ip msdp sa-cache [ADDRESS_FILTER] [CONTENTS]
+show ip msdp sanity
+show ip msdp summary
+msrp
+mrp leave-all-timer period
+mrp leave-timer period
+msrp streams load-file [FILE TYPE]
+show msrp [INTERFACE_NAME]
+show msrp interfaces [INTERFACE_NAME] STATION_TYPE_NAME [STREAMS]
+show msrp streams [STREAM_NAME] [INFO_LEVEL]
+no snmp-server
+show snmp
+show snmp chassis
+show snmp community
+show snmp contact
+show snmp engineID
+show snmp group [GROUP_LIST]
+show snmp host
+show snmp location
+show snmp mib OBJECTS
+show snmp source-interface
+show snmp trap
+show snmp user [USER_LIST]
+show snmp view [VIEW_LIST]
+snmp-server chassis-id id_text
+snmp-server community string_text [MIB_VIEW][ACCESS][ACL_NAMES]
+snmp-server contact contact_string
+snmp-server enable traps[trap_type]
+snmp-server engineID local engine_hex
+snmp-server engineID remote engine_addr [PORT] engine_hex
+snmp-server extension OID_space FILE_PATH [DURATION]
+snmp-server group group_name VERSION [CNTX] [READ] [WRITE] [NOTIFY]
+snmp-server host host_id [VRF_INST][MESSAGE][VERSION] comm_str [PORT]
+snmp-server location node_locate
+snmp-server source-interface INTERFACE
+snmp-server user user_name group_name [AGENT] VERSION [ENGINE][SECURITY]
+snmp-server view view_name family_name INCLUSION
+snmp-server vrf vrf_name
+snmp trap link-status
+clear queue-monitor length statistics
+max-connections connections
+queue-monitor length
+queue-monitor length threshold upper_limit
+queue-monitor length thresholds upper_limit lower_limit
+queue-monitor length global-buffer
+queue-monitor length global-buffer log interval
+queue-monitor length global-buffer thresholds max_segments min_segments
+queue-monitor length log interval
+queue-monitor streaming
+show queue-monitor length [INTERFACES] [csv]
+show queue-monitor length all
+show queue-monitor length global-buffer
+show queue-monitor length limit [INTERFACES] number
+show queue-monitor length [INTERFACES] [FACTOR] drops
+show queue-monitor length [INTERFACES] [FACTOR] tx-latency
+show queue-monitor length status
+shutdown
+allowed-vlan VLAN_LIST
+autovlan disable
+password [ENCRYPTION] [password]
+password [ENCRYPTION] password
+show vmtracer all
+show vmtracer interface [INT_NAME][INFO_LEVEL]
+show vmtracer session [SESSION_LIST]
+show vmtracer session session_name vcenter [INFO_LEVEL]
+show vmtracer session session_name vsm [INFO_LEVEL]
+show vmtracer [INT_NAME] vm [VM_LIST]
+show vmtracer vm [VM_LIST] detail
+show vmtracer [ENTITY] vnic counters
+show vmtracer segment ENTITY
+show vmtracer vxlan vm
+url url_name
+username name_string
+vmtracer HOST_TYPE
+vmtracer session name
+vxlan
+clear monitor reachability probe-statistics
+destination ip DESTINATION_ADDR
+destination port port_id
+hops distance_hops rate probes_quantity probes every INTERVAL uniform
+ip protocol PROT_TYPE
+monitor reachability
+preserve streams
+probe receiver max-streams data_streams
+probe transmitter transmitter_name
+show monitor reachability
+show monitor reachability egress-streams DATA_TYPE OUTPUT
+show monitor reachability ingress-streams DATA_TYPE STREAM_FILTER OUTPUT
+show monitor reachability interface-ttl-statistics STREAM_FILTER
+show monitor reachability probe-statistics DATA_TYPE STREAM_FILTER OUTPUT
+show monitor reachability probe-transmitter XMITTER_LIST
+shutdown
+source interface INT_NAME
+source port [PORT_ROSTER]
+clear monitor hadoop burst-counters [CLUSTERS]
+clear monitor hadoop job-history [CLUSTERS]
+cluster cluster_name
+description label_text
+interval period
+jobtracker [LOCATION] [PORT] [USER]
+monitor hadoop
+show monitor hadoop
+show monitor hadoop cluster all
+show monitor hadoop cluster c_name counters
+show monitor hadoop cluster c_name history
+show monitor hadoop cluster c_name history jobs job_number
+show monitor hadoop cluster c_name jobs
+show monitor hadoop cluster c_name jobs job_number
+show monitor hadoop cluster c_name jobs job_number counter
+show monitor hadoop cluster c_name status
+show monitor hadoop cluster c_name tasktracker
+show monitor hadoop counters
+show monitor hadoop history
+show monitor hadoop status
+show monitor hadoop tasktracker all
+show monitor hadoop tasktracker all counters
+show monitor hadoop tasktracker NODES counters
+show monitor hadoop tasktracker NODES jobs [CLUSTERS]
+show monitor hadoop tasktracker NODES running-tasks [CLUSTERS] [JOBS]
+show monitor hadoop tasktracker NODE running-tasks cluster name job jnum task tnum
+show monitor hadoop cluster c_name tasktracker status
+show monitor hadoop [CLUSTERS] traffic burst [NODE]
+shutdown
+tasktracker http-port port_number
+clear sflow counters
+platform petraA buffers mini-multicast num_buf RUNTIME
+sflow destination dest_addr [UDP_PORT]
+sflow enable
+sflow polling-interval interval_period
+sflow run
+sflow sample SAMPLE_RATE
+sflow source source_addr
+sflow source-interface INT_NAME
+show sflow [INFO_LEVEL]
+show sflow interfaces
+bind interface INTF
+bind mode METHOD
+bind vlan v_range
+clear openflow statistics
+controller tcp:ip_address:tcp_port
+default-action ACTION_TYPE
+description label_text
+keepalive keep_alive_time
+openflow
+profile FIELD_TYPE
+bind interface INTF
+routing vlan VLAN_ID routed-vlan vlan_transit
+shell-command allowed
+show openflow
+show openflow flows
+show openflow ports
+show openflow profiles
+show openflow queues
+show openflow statistics
+shutdown
+action drop
+action DIRECTION mirror INT_NAME
+action output DESTINATION
+action set CONDITION
+directflow
+flow flow_name
+match CONDITION
+priority priority_value
+show directflow
+show directflow flows

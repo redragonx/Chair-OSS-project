@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map For ProDinoMKRZero
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+AxDinoESP32	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+getVersion	KEYWORD2
+getTemp	KEYWORD2
+setFanAutoTemp	KEYWORD2
+getSwitch	KEYWORD2
+setOutput	KEYWORD2
+getOutput	KEYWORD2
+getAutoOutput	KEYWORD2
+getAutoFan	KEYWORD2
+enableAutoFan	KEYWORD2
+getAutoSwitch	KEYWORD2
+enableAutoSwitch	KEYWORD2
+setLED	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
